@@ -1,0 +1,75 @@
+@prefix : <http://purl.org/nessiez/subjects#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+
+: a skos:ConceptScheme;
+        dct:title "School subjects"@en, "Šolski predmeti"@slv ;
+        dct:description "A small vocabulary for school subjects used as an example in the SWIB20 SkoHub workshop"@en, "Manjši geslovnik šolskih predmetov, za potrebe delavnice SWIB20"@slv ;
+        dct:creator <http://lobid.org/team/ap#!>; 
+        dct:issued "2020-11-24" ;
+        vann:preferredNamespaceUri "http://purl.org/nessiez/subjects#" ;
+        dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+        skos:hasTopConcept :maths, :english, :science, :history, :geography, :physics, :chemistry, :physicalEducation, :computerScience, :biology, :foreignLanguages .
+
+:maths a skos:Concept;
+    skos:topConceptOf : ;
+    skos:prefLabel "Mathematics"@en, "Matematika"@slv ;
+    skos:altLabel "Maths"@en, "Math"@en, "Matka"@slv .
+
+:english a skos:Concept;
+           skos:topConceptOf : ;
+           skos:prefLabel "English"@en, "Angleščina"@slv .
+
+:science a skos:Concept;
+           skos:topConceptOf : ;
+           skos:prefLabel "Science"@en, "Znanost"@slv .
+
+:history a skos:Concept;
+            skos:topConceptOf : ;
+            skos:prefLabel "History"@en, "Zgodovina"@slv .
+
+:geography a skos:Concept;
+            skos:topConceptOf : ;
+            skos:prefLabel "Geography"@en, "Geografija"@slv .
+
+:physics a skos:Concept;
+            skos:topConceptOf : ;
+            skos:prefLabel "Physics"@en, "Fizika"@slv .
+
+:chemistry a skos:Concept;
+            skos:topConceptOf : ;
+            skos:prefLabel "Chemistry"@en, "Kemija"@slv .
+
+:physicalEducation a skos:Concept;
+            skos:topConceptOf : ;
+            skos:prefLabel "Physical Education"@en, "Športna vzgoja"@slv .
+
+:computerScience a skos:Concept;
+            skos:topConceptOf : ;
+            skos:prefLabel "Computer Science"@en, "Informatika"@slv .
+
+:biology a skos:Concept;
+            skos:topConceptOf : ;
+            skos:prefLabel "Biology"@en, "Biologija"@slv .
+
+:foreignLanguages a skos:Concept;
+            skos:topConceptOf : ;
+            skos:narrower :german, :french, :spanish;
+            skos:prefLabel "Foreign Languages"@en, "Tuji jeziki"@slv .
+
+:german a skos:Concept;
+            skos:inScheme : ;
+            skos:broader :foreignLanguages ;
+            skos:prefLabel "German"@en, "Nemščina"@slv .
+
+:french a skos:Concept;
+            skos:inScheme : ;
+            skos:broader :foreignLanguages ;
+            skos:prefLabel "French"@en, "Francoščina"@slv .
+
+:spanish a skos:Concept;
+            skos:inScheme : ;
+            skos:broader :foreignLanguages ;
+            skos:prefLabel "Spanish"@en, "Španščina"@slv .
